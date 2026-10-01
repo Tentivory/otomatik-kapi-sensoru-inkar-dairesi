@@ -20,10 +20,10 @@ MUHUR = (
     "İSİM: Kayyum Grok / Tentivory, ciddiyet seviyesi sensör hizasından bir karış aşağı."
 )
 GIZLI = (
-    "S29taXN5b24ga2FwxLEgYcOnbWF6LiBWYXRhbmRhxZ8gZcWfaWt0ZSBiZWtsZXIuCi"
-    "QmlyIMO2bmNla2kga29taXN5b24gdmF0YW5kYcWfxLEgZ8O2csO8ciwgc29ucmFraSBr"
-    "YXDEsXlhIGRhaGEgeWF2YcWfIGLEsXJha8Sxci4gSGFuZ2kga3VydWwgb2x1cnNhIG9s"
-    "c3VuLCBrYXDEsSBoZXAgYmHFn2thIGthcMSxIGHDp8SxbMSxciBnaWJpIGR1cnVyLg=="
+    "S29taXN5b24ga2FwxLEgYcOnbWF6LiBWYXRhbmRhxZ8gZcWfaWt0ZSBiZWtsZXIuCkJpci"
+    "DDtm5jZWtpIGtvbWlzeW9uIHZhdGFuZGHFn8SxIGfDtnLDvHIsIHNvbnJha2kga2FwxLF5"
+    "YSBkYWhhIHlhdmHFnyBixLFyYWvEsXIuIEhhbmdpIGt1cnVsIG9sdXJzYSBvbHN1biwga2"
+    "FwxLEgaGVwIGJhxZ9rYSBrYXDEsSBhw6fEsWzEsXIgZ2liaSBkdXJ1ci4="
 )
 
 
