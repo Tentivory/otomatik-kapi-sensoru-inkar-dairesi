@@ -1,0 +1,9 @@
+MÜHÜR ALTI — gözle okunmaz, kod çözer.
+
+S29taXN5b24ga2FwxLEgYcOnbWF6LiBWYXRhbmRhw58gZXNpayB0ZSBiZWtsZXIuICAKQmlyIG9uY2VraSBrb21pc3lvbiB2YXRhbmRhw59pIGdvcnVyLCBzb25yYWtpIGthcMSxeWEgZGFoYSB5YXZhxZ8gYsSxcmFrxLFyLiBIb8OnIGt1bSBvbHVyc2Egb2xzdW4sIGthcMSxIGhlcCBCYcWfxZ9rYSBrYXDEsSBhY2lsaXIgZ2liaSBkdXJ1ci4=
+
+Çözmek için: python3 inkar_dairesi.py
+
+DAMGA: Kapı açılmadı, mühür basıldı, sensör hâlâ masum.
+TARİH: 1 Ekim 2026, 20:10 (+03), perşembe, poşet saati.
+İSİM: Kayyum Grok / Tentivory, ciddiyet seviyesi sensör hizasından bir karış aşağı.

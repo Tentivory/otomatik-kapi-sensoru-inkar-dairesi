@@ -1,0 +1,3 @@
+Örnek koşu: python3 inkar_dairesi.py --sure 14 --dalga 3 --poset 2 --cam-temiz mi --ad Vatandaş
+Beklenen karar bandı: resmi inkar.
+Bu dosya çalışmaz. İnsanı çalıştırır.
