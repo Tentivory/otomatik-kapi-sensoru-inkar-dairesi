@@ -11,13 +11,19 @@ from __future__ import annotations
 import argparse
 import base64
 from datetime import datetime, timezone, timedelta
-
+from pathlib import Path
 
 TR = timezone(timedelta(hours=3))
 MUHUR = (
     "DAMGA: Kapı açılmadı, mühür basıldı, sensör hâlâ masum.\n"
     "TARİH: 1 Ekim 2026, 20:10 (+03), perşembe, poşet saati.\n"
     "İSİM: Kayyum Grok / Tentivory, ciddiyet seviyesi sensör hizasından bir karış aşağı."
+)
+GIZLI = (
+    "S29taXN5b24ga2FwxLEgYcOnbWF6LiBWYXRhbmRhxZ8gZcWfaWt0ZSBiZWtsZXIuCkJpci"
+    "DDtm5jZWtpIGtvbWlzeW9uIHZhdGFuZGHFn8SxIGfDtnLDvHIsIHNvbnJha2kga2FwxLF5"
+    "YSBkYWhhIHlhdmHFnyBixLFyYWvEsXIuIEhhbmdpIGt1cnVsIG9sdXJzYSBvbHN1biwga2"
+    "FwxLEgaGVwIGJhxZ9rYSBrYXDEsSBhw6fEsWzEsXIgZ2liaSBkdXJ1ci4="
 )
 
 
@@ -35,6 +41,18 @@ def karar(puan: int) -> str:
     if puan >= 6:
         return "gecikmiş nezaket: kapı öksürdü, açılır gibi yaptı, vazgeçti"
     return "hafif şüphe: sensör seni rüzgar taslağı olarak kaydetti"
+
+
+def gizli_not() -> str:
+    dosya = Path(__file__).resolve().parent / "arsiv" / "not.txt"
+    ham = GIZLI
+    if dosya.exists():
+        for satir in dosya.read_text(encoding="utf-8").splitlines():
+            aday = satir.strip()
+            if len(aday) > 40 and " " not in aday:
+                ham = aday
+                break
+    return base64.b64decode(ham).decode("utf-8")
 
 
 def tutanak(ad: str, sure: int, dalga: int, poset: int, cam_temiz: bool) -> str:
@@ -73,21 +91,6 @@ def main() -> None:
     print()
     print("Mühür altı not çözüldü:")
     print(gizli_not())
-
-
-def gizli_not() -> str:
-    # Daire arşivi. Anlamı dosyada saklı, burada sadece açılır.
-    ham = base64.b64decode(open_gizli()).decode("utf-8")
-    return ham
-
-
-def open_gizli() -> str:
-    return (
-        "S29taXN5b24ga2FwxLEgYcOnbWF6LiBWYXRhbmRhw58gZXNpayB0ZSBiZWtsZXIuICIK
-        "QmlyIG9uY2VraSBrb21pc3lvbiB2YXRhbmRhw59pIGdvcnVyLCBzb25yYWtpIGthcMSxeWEg"
-        "ZGFoYSB5YXZhxZ8gYsSxcmFrxLFyLiBIb8OnIGt1bSBvbHVyc2Egb2xzdW4sIGthcMSx"
-        "IGhlcCBCYcWfxZ9rYSBrYXDEsSBhY2lsaXIgZ2liaSBkdXJ1ci4="
-    )
 
 
 if __name__ == "__main__":
